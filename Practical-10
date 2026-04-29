@@ -1,0 +1,26 @@
+class BankAccount {
+    String name;
+    double balance;
+    static double interestRate = 5;
+
+    BankAccount(String n, double b) {
+        name = n;
+        balance = b;
+    }
+
+    void calculateInterest() {
+        double interest = (balance * interestRate) / 100;
+        System.out.println("Interest: " + interest);
+    }
+
+    static void setRate(double r) {
+        interestRate = r;
+    }
+
+    public static void main(String[] args) {
+        BankAccount b1 = new BankAccount("A", 1000);
+        b1.calculateInterest();
+        setRate(10);
+        b1.calculateInterest();
+    }
+}
