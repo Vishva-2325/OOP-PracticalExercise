@@ -1,0 +1,23 @@
+class RectangleTest {
+    double width, height;
+
+    RectangleTest(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    double area() { return width * height; }
+
+    public static void main(String[] args) {
+        RectangleTest r1 = new RectangleTest(4,40);
+        RectangleTest r2 = new RectangleTest(3.5,35.9);
+
+        System.out.println(r1.area());
+        System.out.println(r2.area());
+
+        if (r1.area() > r2.area())
+            System.out.println("r1 larger");
+        else
+            System.out.println("r2 larger");
+    }
+}
